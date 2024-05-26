@@ -5,16 +5,18 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+/.next/cache
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
+
+
+# server
+/server/node_modules
+/server/.env
 
 # misc
 .DS_Store
@@ -34,3 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/yarn.lock
+.yarn.lock
