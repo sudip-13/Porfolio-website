@@ -43,7 +43,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <Image src="/chousal.jpg" alt="" className='rounded-full' />
+                                <Image src="/chousal.jpg" alt="" className='rounded-full' width={500} height={500}/>
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
@@ -66,7 +66,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <Image src="/bccs.jpg" alt="Higher Seconary" className='rounded-full' />
+                                <Image src="/bccs.jpg" alt="Higher Seconary" className='rounded-full'width={500} height={500} />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
@@ -89,7 +89,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <Image src="/bwu.jpg" alt="" className='rounded-full' />
+                                <Image src="/bwu.jpg" alt="" className='rounded-full'width={500} height={500} />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>

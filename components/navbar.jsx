@@ -2,7 +2,7 @@
 // "use client" is specific to Blitz.js, you can remove it if you're using a different framework like Next.js
 
 import { useCallback, useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image from 'next/image'
 
 export const NavbarComponents = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -50,7 +50,7 @@ export const NavbarComponents = () => {
     <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo" />
+          <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo"/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sudip</span>
         </a>
         <button
@@ -74,10 +74,12 @@ export const NavbarComponents = () => {
               <a href="#about-page" className={`block py-2 px-3 rounded ${activeSection === 'about-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'about-page' ? 'page' : undefined}>About Me</a>
             </li>
             <li>
-              <a href="#education-page" className={`block py-2 px-3 text-${activeSection === 'education-page' ? 'blue' : 'gray-900'} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'education-page' ? 'page' : undefined}>Education</a>
+            <a href="#education-page" className={`block py-2 px-3 rounded ${activeSection === 'education-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'home-page' ? 'page' : undefined}>Education</a>
+              
             </li>
             <li>
-              <a href="#skills-page" className={`block py-2 px-3 text-${activeSection === 'skills-page' ? 'blue' : 'gray-900'} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'skills-page' ? 'page' : undefined}>Skills</a>
+             
+              <a href="#skills-page" className={`block py-2 px-3 rounded ${activeSection === 'skills-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'skills-page' ? 'page' : undefined}>Skills</a>
             </li>
             <li>
               <a href="#projects-page" className={`block py-2 px-3 text-${activeSection === 'projects-page' ? 'blue' : 'gray-900'} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'projects-page' ? 'page' : undefined}>Projects</a>
