@@ -8,6 +8,9 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 
+import Image from 'next/image';
+
+
 
 interface EducationProps {
     id: string;
@@ -40,7 +43,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <img src="/chousal.jpg" alt="" className='rounded-full' />
+                                <Image src="/chousal.jpg" alt="" className='rounded-full' />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
@@ -63,7 +66,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <img src="/bccs.jpg" alt="Higher Seconary" className='rounded-full' />
+                                <Image src="/bccs.jpg" alt="Higher Seconary" className='rounded-full' />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>
@@ -86,7 +89,7 @@ export const Education: React.FC<EducationProps> = ({ id }) => {
                         <TimelineSeparator>
                             <TimelineConnector className='h-6 sm:h-auto' />
                             <TimelineDot className='h-12 w-12 sm:h-16 sm:w-16'>
-                                <img src="/bwu.jpg" alt="" className='rounded-full' />
+                                <Image src="/bwu.jpg" alt="" className='rounded-full' />
                             </TimelineDot>
                             <TimelineConnector />
                         </TimelineSeparator>

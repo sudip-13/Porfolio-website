@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 
 import Typewriter from 'typewriter-effect';
 interface HomePageProps {
@@ -12,13 +13,13 @@ export const HomePage: React.FC<HomePageProps> = ({ id }) => {
     <div className="mb-8 sm:mb-0 flex flex-col items-center sm:items-start">
       {/* Icons */}
       <a href="https://github.com/sudip-13" style={{ display: "block", marginBottom: "20px" }}>
-        <img src="/github.png" alt="GitHub" className="h-10 sm:h-12 md:h-16 rounded-full" />
+        <Image src="/github.png" alt="GitHub" className="h-10 sm:h-12 md:h-16 rounded-full" />
       </a>
       <a href="https://www.linkedin.com/in/sudip-kundu-b24984265/" style={{ display: "block", marginBottom: "20px" }}>
-        <img src="/linkedin.webp" alt="LinkedIn" className="h-10 sm:h-12 md:h-16 rounded-full" />
+        <Image src="/linkedin.webp" alt="LinkedIn" className="h-10 sm:h-12 md:h-16 rounded-full" />
       </a>
       <a href="https://x.com/sudip2003kundu">
-        <img src="/twitter.png" alt="Twitter" className="h-10 sm:h-12 md:h-16 rounded-full" />
+        <Image src="/twitter.png" alt="Twitter" className="h-10 sm:h-12 md:h-16 rounded-full" />
       </a>
     </div>
     <div className="text-center sm:text-left w-full sm:w-1/3">
@@ -44,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({ id }) => {
     </div>
   
     <div className="sm:flex sm:justify-center">
-      <img src="/homeimg.png" alt="Home" className="h-28 sm:h-40 md:h-60 rounded-full animate-pulse hover:animate-bounce" />
+      <Image src="/homeImage.png" alt="Home" className="h-28 sm:h-40 md:h-60 rounded-full animate-pulse hover:animate-bounce" />
     </div>
   </div>
   

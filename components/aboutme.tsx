@@ -1,6 +1,12 @@
+import Image from 'next/image';
+
+
 interface AboutProps {
     id: string;
 }
+
+
+
 export const About: React.FC<AboutProps> = ({ id }) => {
     return (
         <>
@@ -13,13 +19,13 @@ export const About: React.FC<AboutProps> = ({ id }) => {
                 </div>
                 <div className="flex flex-col sm:flex-row justify-evenly items-center w-full max-w-6xl">
                     <div className="w-full sm:w-1/3 pl-4 sm:pl-0 sm:pr-4">
-                        <img src="/aboutimg.jpg" alt="image" className="rounded-lg h-72 sm:mt-12" />
+                        <Image src="/aboutImage.jpg" alt="image" className="rounded-lg h-72 sm:mt-12" />
                     </div>
                     <div className="w-full sm:w-1/2 px-4 sm:px-12 mt-8 sm:mt-20">
-                        <p className="font-serif font-medium text-xl text-teal-500">Hey there, I'm Sudip Kundu hailing from Brindrabanpur Barsal, Bankura, West Bengal, India (722142). Currently cruising through my B.Tech in Computer Science with a specialization in AIML at Brainware University, Barasat.</p>
+                        <p className="font-serif font-medium text-xl text-teal-500">Hey there, I&apos;m Sudip Kundu hailing from Brindrabanpur Barsal, Bankura, West Bengal, India (722142). Currently cruising through my B.Tech in Computer Science with a specialization in AIML at Brainware University, Barasat.</p>
                         <p className="font-serif font-medium text-xl mt-8 text-teal-500">A passionate Machine Learning enthusiast and web developer, dedicated to creating innovative solutions and advancing the field of technology through continuous learning and development</p>
                         <p className="font-serif font-medium text-xl mt-8 text-teal-500">
-                            Feel free to reach out! Click the 'Contact' button. Looking forward to connecting with you! I'm always up for interesting conversations and collaborations.
+                            Feel free to reach out! Click the &apos;Contact&apos; button. Looking forward to connecting with you! I&apos;m always up for interesting conversations and collaborations.
                         </p>
                         <div className="pl-4 sm:pl-12 mt-8">
                             <button type="button" className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200 me-2 mb-2 c w-48">

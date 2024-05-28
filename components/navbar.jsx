@@ -1,7 +1,8 @@
 "use client";
 // "use client" is specific to Blitz.js, you can remove it if you're using a different framework like Next.js
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export const NavbarComponents = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -12,7 +13,7 @@ export const NavbarComponents = () => {
   };
 
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const homeSection = document.getElementById('home-page');
     const aboutSection = document.getElementById('about-page');
     const educationSection = document.getElementById('education-page');
@@ -36,20 +37,20 @@ export const NavbarComponents = () => {
     } else {
       setActiveSection(null);
     }
-  };
+  },[setActiveSection]);
   useEffect(() => {
     console.log(activeSection)
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setActiveSection,handleScroll]);
+  }, [setActiveSection,handleScroll,activeSection]);
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo" />
+          <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sudip</span>
         </a>
         <button
