@@ -19,7 +19,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
                 </div>
                 <div className="flex flex-col sm:flex-row justify-evenly items-center w-full max-w-6xl">
                     <div className="w-full sm:w-1/3 pl-4 sm:pl-0 sm:pr-4">
-                        <Image src="/aboutImage.jpg" alt="image" className="rounded-lg h-72 sm:mt-12" />
+                        <Image src="/aboutimg.jpg" alt="image" className="rounded-lg h-72 sm:mt-12" />
                     </div>
                     <div className="w-full sm:w-1/2 px-4 sm:px-12 mt-8 sm:mt-20">
                         <p className="font-serif font-medium text-xl text-teal-500">Hey there, I&apos;m Sudip Kundu hailing from Brindrabanpur Barsal, Bankura, West Bengal, India (722142). Currently cruising through my B.Tech in Computer Science with a specialization in AIML at Brainware University, Barasat.</p>

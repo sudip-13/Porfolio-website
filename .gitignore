@@ -5,14 +5,14 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-/.next/cache
+/.next
 
 # testing
 /coverage
 
 # production
 /build
-
+/
 
 # server
 /server/node_modules
