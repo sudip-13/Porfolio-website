@@ -14,9 +14,11 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
+    "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
     "typewriter-effect": "^2.21.0"
   },
@@ -24,7 +26,6 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
- 
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",

@@ -45,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({ id }) => {
     </div>
   
     <div className="sm:flex sm:justify-center">
-      <Image src="/homeImage.png" alt="Home" className="h-28 sm:h-40 md:h-60 rounded-full animate-pulse hover:animate-bounce" />
+      <Image src="/homeimg.png" alt="Home" className="h-28 sm:h-40 md:h-60 rounded-full animate-pulse hover:animate-bounce" />
     </div>
   </div>
   
