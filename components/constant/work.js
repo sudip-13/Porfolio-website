@@ -29,7 +29,7 @@ export const projects = [
         "ProjectName":"Plant Disease Detection",
         "projectDescription":"LeafDoctor: A plant disease detection system that identifies diseases in pepper, potato, and tomato plants based on leaf images, aiding in timely treatment and healthy crop yield.",
         "projectImage":"/project/plant.jpg",
-        "projectLink":"https://vimeo.com/user212509052",
+        "projectLink":"https://vimeo.com/929143932",
         "codeLink":"https://github.com/sudip-13/Plant-disease-detection",
         "TechStack":["tensorflow","keras","docker"]
     },

@@ -3,15 +3,21 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image'
-
+import { MoonIcon } from "@/components/moonIcon";
+import { SunIcon } from "@/components/sunIcon";
+import { Tooltip } from "@nextui-org/tooltip";
+import { Switch, Badge } from "@nextui-org/react";
 export const NavbarComponents = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const toggleTheme = useCallback(() => {
 
+  }, [])
 
   const handleScroll = useCallback(() => {
     const homeSection = document.getElementById('home-page');
@@ -37,20 +43,20 @@ export const NavbarComponents = () => {
     } else {
       setActiveSection(null);
     }
-  },[setActiveSection]);
+  }, [setActiveSection]);
   useEffect(() => {
     console.log(activeSection)
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setActiveSection,handleScroll,activeSection]);
+  }, [setActiveSection, handleScroll, activeSection]);
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo"/>
+          <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sudip</span>
         </a>
         <button
@@ -67,25 +73,42 @@ export const NavbarComponents = () => {
         </button>
         <div className={`w-full md:flex md:w-auto ${isMenuOpen ? '' : 'hidden'}`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
+            <li>
               <a href="#home-page" className={`block py-2 px-3 rounded ${activeSection === 'home-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'home-page' ? 'page' : undefined}>Home</a>
             </li>
             <li>
               <a href="#about-page" className={`block py-2 px-3 rounded ${activeSection === 'about-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'about-page' ? 'page' : undefined}>About Me</a>
             </li>
             <li>
-            <a href="#education-page" className={`block py-2 px-3 rounded ${activeSection === 'education-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'home-page' ? 'page' : undefined}>Education</a>
-              
+              <a href="#education-page" className={`block py-2 px-3 rounded ${activeSection === 'education-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'home-page' ? 'page' : undefined}>Education</a>
+
             </li>
             <li>
-             
+
               <a href="#skills-page" className={`block py-2 px-3 rounded ${activeSection === 'skills-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'skills-page' ? 'page' : undefined}>Skills</a>
             </li>
             <li>
-              <a href="#projects-page" className={`block py-2 px-3 text-${activeSection === 'projects-page' ? 'blue' : 'gray-900'} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'projects-page' ? 'page' : undefined}>Projects</a>
+              <a href="#projects-page" className={`block py-2 px-3 rounded ${activeSection === 'projects-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'projects-page' ? 'page' : undefined}>Projects</a>
+
             </li>
             <li>
-              <a href="#contact-page" className={`block py-2 px-3 text-${activeSection === 'contact-page' ? 'blue' : 'gray-900'} rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'contact-page' ? 'page' : undefined}>Contact</a>
+              <a href="#contact-page" className={`block py-2 px-3 rounded ${activeSection === 'contact-page' ? 'text-blue-500' : 'text-white'} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} aria-current={activeSection === 'contact-page' ? 'page' : undefined}>Contact</a>
+
+            </li>
+            <li>
+              <Tooltip color="warning" delay={700} showArrow={true} content="Toggle theme">
+                <button>
+                  <Switch
+                    onClick={toggleTheme}
+                    defaultSelected
+                    size="lg"
+                    color="success"
+                    startContent={<SunIcon />}
+                    endContent={<MoonIcon />}
+                  ></Switch>
+                </button>
+              </Tooltip>
+           
             </li>
           </ul>
         </div>
