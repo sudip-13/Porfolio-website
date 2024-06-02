@@ -13,7 +13,7 @@ export const Project: React.FC<ProjectProps> = ({ id }) => {
     return (
         <>
             <div id={id}>
-                <div className="text-center">
+                <div className="text-center text-black dark:text-white">
                     <p className="text-4xl sm:text-5xl font-serif font-medium mt-4">Projects</p>
                     <p className="mt-4 font-serif font-medium text-lg sm:text-xl ">Explore My Journey Through Pixels and Lines</p>
                 </div>

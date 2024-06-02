@@ -10,12 +10,12 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({ id }) => {
     return (
         <>
-            <div id={id} className="flex flex-col items-center">
-                <div className="flex justify-center">
+            <div id={id} className="flex flex-col items-center ">
+                <div className="flex justify-center text-black dark:text-white">
                     <p className="text-5xl font-serif font-medium mt-4">About Me</p>
                 </div>
                 <div className="flex justify-center">
-                    <p className="mt-2 font-serif font-medium text-xl">My Introduction</p>
+                    <p className="mt-2 font-serif font-medium text-xl text-black dark:text-white">My Introduction</p>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-evenly items-center w-full max-w-6xl">
                     <div className="w-full sm:w-1/3 pl-4 sm:pl-0 sm:pr-4">

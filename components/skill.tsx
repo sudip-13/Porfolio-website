@@ -7,8 +7,8 @@ interface SkillProps {
 export const Skill: React.FC<SkillProps> = ({ id }) => {
     return (
         <>
-            <div id={id}>
-                <div className="text-center">
+            <div id={id} >
+                <div className="text-center text-black dark:text-white">
                     <p className="text-4xl sm:text-5xl font-serif font-medium mt-4">Skills</p>
                     <p className="mt-4 font-serif font-medium text-lg sm:text-xl ">where creativity meets functionality</p>
                 </div>

@@ -77,7 +77,7 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
         <>
             <div id={id}>
                 <ToastContainer />
-                <div className="text-center">
+                <div className="text-center text-black dark:text-white">
                     <p className="text-4xl sm:text-5xl font-serif font-medium mt-4">Get in touch</p>
                     <p className="mt-4 font-serif font-medium text-lg sm:text-xl ">Contact Me</p>
                 </div>
@@ -89,10 +89,10 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
                                     <path d="m729.33-162.67-46.66-46.66L752.33-280H576v-66.67h176.33l-69.66-70.66L729.33-464 880-313.33 729.33-162.67ZM146.67-280q-27.5 0-47.09-19.58Q80-319.17 80-346.67v-426.66q0-27.5 19.58-47.09Q119.17-840 146.67-840h546.66q27.5 0 47.09 19.58Q760-800.83 760-773.33v222.66q-8.33-1.33-16.67-2-8.33-.66-16.66-.66-8.67 0-16.67.5-8 .5-16.67 1.83v-172.33L416-528 146.67-722.33v375.66h341.66Q487-338 486.83-331q-.16 7-.16 15.83 0 8.84.66 17.67.67 8.83 2.67 17.5H146.67ZM190-773.33 416-610l232-163.33H190Zm-43.33 426.66V-773.33v426.66Z" />
                                 </svg>
                             </div>
-                            <p className="flex justify-center text-xl font-serif"> Email</p>
-                            <p className="flex justify-center font-serif"> sudip2003kundu@gmail.com</p>
+                            <p className="flex justify-center text-xl font-serif text-black dark:text-white"> Email</p>
+                            <p className="flex justify-center font-serif text-black dark:text-white"> sudip2003kundu@gmail.com</p>
                             <button className="flex items-center justify-center mt-2" onClick={() => { window.location.href = 'mailto:sudip2003kundu@gmail.com'; }}> {/* Added onClick event to open default mail app */}
-                                <a className="font-serif">Write me</a>
+                                <a className="font-serif text-black dark:text-white">Write me</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="32px" fill="#0000F5">
                                     <path d="m560-241.33-47.33-47.34L672-448H160v-66.67h512l-160-160L559.33-722 800-481.33l-240 240Z" />
                                 </svg>
@@ -102,10 +102,10 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
                             <div className="flex flex-col items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#0000F5"><path d="M796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z"/></svg>
                             </div>
-                            <p className="flex justify-center text-xl font-serif mt-2"> Call</p>
-                            <p className="flex justify-center  px-14 sm:px tabular-nums"> 7432969136</p>
+                            <p className="flex justify-center text-xl font-serif mt-2 text-black dark:text-white"> Call</p>
+                            <p className="flex justify-center  px-14 sm:px tabular-nums text-black dark:text-white"> 7432969136</p>
                             <button className="flex items-center justify-center mt-2"> {/* Added justify-center class */}
-                                <a href="tel:7432969136" className="font-serif">Call me</a>
+                                <a href="tel:7432969136" className="font-serif text-black dark:text-white">Call me</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="32px" fill="#0000F5">
                                     <path d="m560-241.33-47.33-47.34L672-448H160v-66.67h512l-160-160L559.33-722 800-481.33l-240 240Z" />
                                 </svg>
