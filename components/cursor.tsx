@@ -22,14 +22,36 @@ const CustomCursor: React.FC = () => {
 
     if (!cursor) return;
 
+    // Update cursor position
+    const updateCursorPosition = (x: number, y: number) => {
+      cursor.style.top = `${y - 10}px`;
+      cursor.style.left = `${x - 10}px`;
+    };
+
     // Event listener for mouse movement
     const handleMouseMove = (e: MouseEvent) => {
-      cursor.style.top = `${e.pageY - 10}px`;
-      cursor.style.left = `${e.pageX - 10}px`;
+      updateCursorPosition(e.clientX, e.clientY);
+    };
+
+    // Event listener for touch movement
+    const handleTouchMove = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      updateCursorPosition(touch.clientX, touch.clientY);
     };
 
     // Event listener for mouse click
     const handleMouseDown = () => {
+      setClicked(true);
+      cursor.classList.add("expand");
+      // Reset click state after 500 milliseconds
+      setTimeout(() => {
+        setClicked(false);
+        cursor.classList.remove("expand");
+      }, 500);
+    };
+
+    // Event listener for touch start
+    const handleTouchStart = () => {
       setClicked(true);
       cursor.classList.add("expand");
       // Reset click state after 500 milliseconds
@@ -50,12 +72,16 @@ const CustomCursor: React.FC = () => {
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mousedown", handleMouseDown);
     document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchstart", handleTouchStart);
 
     // Cleanup event listeners on component unmount
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchstart", handleTouchStart);
     };
   }, []); // useEffect runs only once on mount
 
