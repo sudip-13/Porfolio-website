@@ -89,10 +89,10 @@ const CustomCursor: React.FC = () => {
     <>
       <div
         ref={cursorRef}
-        className={`cursor-custom ${cursorColor} fixed pointer-events-none transition-transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-full`}
+        className={`cursor-custom ${cursorColor} fixed pointer-events-none transition-transform -translate-x-1/2 -translate-y-1/2 z-[1000] rounded-full`}
       />
       <div
-        className={`fixed pointer-events-none transition-transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-full w-8 h-8 border-2 ${cursorColor}`}
+        className={`fixed pointer-events-none transition-transform -translate-x-1/2 -translate-y-1/2 z-[1000] rounded-full w-8 h-8 border-2 ${cursorColor}`}
       >
         <div
           className={`w-8 h-8 ${clicked ? "scale-100 opacity-30" : "scale-0 opacity-0"} transition-transform duration-500 ease-in-out rounded-full -z-10 ${cursorColor}`}
