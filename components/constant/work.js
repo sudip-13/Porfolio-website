@@ -43,8 +43,8 @@ export const projects = [
     },
     {
         "ProjectName":"Youtube Comment Analyzer",
-        "projectDescription":"LearnTube: A platform similar to YouTube where users can upload, share, and monetize both free and paid educational courses.",
-        "projectImage":"/project/ytcmtanalyzer.jpg",
+        "projectDescription":"The YouTube Comment Analyzer Firefox extension categorizes YouTube comments into positive, neutral, and negative sentiments for an informed browsing experience. 😊🔍👍",
+        "projectImage":"/project/ytcmanalyzer.jpg",
         "projectLink":"https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-analyzer/",
         "codeLink":"https://github.com/sudip-13/youtube-comment-analysis",
         "TechStack":["vandersentiment","googleapiclient","fastapi"]
