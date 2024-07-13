@@ -18,13 +18,30 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+    
+        // Basic validation
+        if (!name || !email || !messsage) {
+            toast.warn('Please fill out all fields: Name, Email, and Message', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+           
+            return;
+        }
+    
         setLoading(true);
-
+    
         emailjs
             .send(
                 `${process.env.NEXT_PUBLIC_Service_ID}`,
                 `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
-
                 {
                     from_name: name,
                     to_name: "Sudip Kundu",
@@ -33,12 +50,10 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
                     message: messsage,
                 },
                 process.env.NEXT_PUBLIC_PUBLIC_KEY
-
             )
             .then(
                 () => {
                     setLoading(false);
-
                     toast('Thank you. I will get back to you as soon as possible.', {
                         position: "top-right",
                         autoClose: 5000,
@@ -50,10 +65,9 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
                         theme: "light",
                         transition: Bounce,
                     });
-                    SetName("")
-                    SetEmail("")
-                    SetMessage("")
-
+                    SetName("");
+                    SetEmail("");
+                    SetMessage("");
                 },
                 (error) => {
                     setLoading(false);
@@ -72,6 +86,7 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
                 }
             );
     };
+    
 
     return (
         <>

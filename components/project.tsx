@@ -50,6 +50,7 @@ export const Project: React.FC<ProjectProps> = ({ id }) => {
                     </div>
                 ))}
                 </div>
+                
             </div>
         </>
     )

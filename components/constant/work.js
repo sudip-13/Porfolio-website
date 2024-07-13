@@ -40,6 +40,15 @@ export const projects = [
         "projectLink":"https://learntube-v7lw.onrender.com/",
         "codeLink":"https://github.com/sudip-13/learnTube",
         "TechStack":["S3-storage","stripe","graphql"]
+    },
+    {
+        "ProjectName":"Youtube Comment Analyzer",
+        "projectDescription":"LearnTube: A platform similar to YouTube where users can upload, share, and monetize both free and paid educational courses.",
+        "projectImage":"/project/ytcmtanalyzer.jpg",
+        "projectLink":"https://addons.mozilla.org/en-US/firefox/addon/youtube-comments-analyzer/",
+        "codeLink":"https://github.com/sudip-13/youtube-comment-analysis",
+        "TechStack":["vandersentiment","googleapiclient","fastapi"]
     }
+
 
 ]

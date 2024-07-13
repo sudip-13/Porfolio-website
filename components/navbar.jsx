@@ -61,7 +61,7 @@ export const NavbarComponents = (props) => {
   }, [setActiveSection, handleScroll, activeSection]);
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10">
+    <nav className="bg-slate-300 border-gray-200 dark:bg-gray-900 sticky top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src="/pic.jpg" className="h-10 w-9 rounded-full" alt="Flowbite Logo" />

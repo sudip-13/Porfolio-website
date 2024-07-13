@@ -25,6 +25,8 @@ export default function Home() {
           <Project id="projects-page" />
           <div className="pt-16 "></div>
           <Contact id="contact-page" />
+          <div className="pt-16 "></div>
+      
           <div className="pb-32 "></div>
           <div className="flex items-center flex-col dark:text-white text-black">
             <p className="font-serif text-5xl font-semibold">Sudip Kundu</p>
